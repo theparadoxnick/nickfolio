@@ -1,0 +1,19 @@
+.menu
+    display: none
+    transition: .5s opacity ease 
+    opacity: 0
+
+    .wrap
+        margin-top: 10%
+
+    &.-is-active
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        background-image: url('../img/menu-background.png')
+        background-size: cover
+        opacity: 1
+        transition: .5s opacity ease 

@@ -1,0 +1,37 @@
+// #####################################################################
+//                               MAIN
+// #####################################################################
+// Arquivo que agrupa todos os outros arquivos e gera o CSS principal
+// do site
+//
+
+// "_vars" > Arquivo de Variaveis, importar sempre primeiro
+@import "_vars"
+
+// LIBS
+// Todos as bibliotecas de CSS prontas devem ser importadas aqui
+// Importe as libs manualmente
+@import "lib/*"
+
+// Mixins
+// Arquivos de mixins ( funções automatizadoras ) do projeto
+@import "/mixins/*.styl"
+
+// Placeholders
+// Arquivo com espaços reservados para regras usadas com muita frequencia
+@import "_placeholders.styl"
+
+// Generics
+// Todas as regras genéricas que não precisam de classe ou são geradas automaticamente
+@import "/generics/*"
+
+// Blocks
+// Todos os blocos personalizados
+@import "/blocks/*"
+
+//  "_global-mods" pequenas regras modificadoras
+@import "_global-mods.styl"
+
+// z-index
+// Insira as regras de Z-index nesse arquivo
+@import "_z-index.styl"

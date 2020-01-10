@@ -1,0 +1,42 @@
+
+.cards
+    display: flex
+
+.card__grid
+    width: 46%
+
+    &:last-of-type
+        width: 36%
+
+.card
+    display: block
+    text-decoration: none
+    margin: 10px 10px 20px 0px
+    cursor: pointer
+    transition: .5s box-shadow, border ease
+
+    &:hover
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1),
+        0 10px 14px rgba(0, 0, 0, 0.1)
+
+
+.card__figcaption
+    padding: 20px
+    background-color: $white
+
+.card__subtitle
+    color: $default-color
+    font-weight: bold
+    line-height: 2em
+    span
+        font-weight: 400
+
+.card__caption
+    color: $brand
+    font-weight: bold
+    font-size: 2em
+    line-height: 1.2em
+
+.card__image
+    display: block
+    width: 100%

@@ -1,0 +1,14 @@
+// #####################################################################
+//                       IMG URL 
+// #####################################################################
+// Função que retorna o caminho correto das imagens do projeto
+// 
+// Exemplo de uso:
+// background imgurl( 'logo.png' )
+
+
+imgurl($img, $folder = '')
+    if $folder != ''
+        // caso receba paremetro folter adiciona na construcao da url
+        $folder = $folder + "/"
+    url( '../imgs/' + $folder + $img )

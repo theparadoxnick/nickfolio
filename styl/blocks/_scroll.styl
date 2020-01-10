@@ -1,0 +1,54 @@
+//------------
+// Mouse Scroll
+//------------
+
+.mouse
+    // display: none
+    text-align: center
+    margin: 0 auto
+
+.mouse__caption
+    position: absolute
+    font-size: 12px
+    color: $white
+    width: 100px
+    right: 50%
+    bottom: 180%
+    transform: translate(50%,-50%) rotate(270deg)
+
+.mouse__scroller
+    position: absolute;
+    top: 100%
+    right: 50%
+    width: 26px
+    height: 42px
+    border: 1px solid $white
+    border-radius: 60px
+    animation: mouse 2s infinite ease forwards
+
+    @keyframes mouse
+        0%
+            top: 98%
+        50%
+            top: 100%
+        100%
+            top: 98%
+
+    &:after
+        content: ''
+        position: absolute
+        right 50%
+        width: 4px
+        height: 8px
+        background-color: $white
+        transform: translate(50%,-50%)
+        border-radius: 100%
+        animation: scroller 2s infinite ease forwards
+
+        @keyframes scroller
+            from
+                top: 30%
+                opacity: 1
+            to
+                top: 35%
+                opacity: .5

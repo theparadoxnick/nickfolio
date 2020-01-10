@@ -1,0 +1,82 @@
+// #####################################################################
+//                        Media Query mixin 
+// #####################################################################
+// Mixin que facilita o uso do @media
+// 
+
+
+//-----------------------------------
+// CONFIG
+//-----------------------------------
+
+$tab-p-width =  640px
+$tab-l-width =  910px
+$lap-width   =  1025px
+$desk-width  =  1420px
+
+
+//----------------------------------------------------------------
+// MediaQuery Mixins
+// exemplo: 
+//      +mobile_and_tablet()
+//          color red
+//----------------------------------------------------------------
+
+// Mobile First
+tablet-p()
+    @media screen and ( min-width: $tab-p-width )
+        {block}
+
+tablet-l()
+    @media screen and ( min-width: $tab-l-width )
+        {block}
+
+laptop()
+    @media screen and ( min-width: $lap-width )
+        {block}
+
+desktop()
+    @media screen and ( min-width: $lap-width )
+        {block}
+
+
+// Generic First
+only_mobile()
+    @media screen and ( max-width: $tab-p-width - 1px )
+        {block}
+
+only_mobile_portrait()
+    @media screen and ( max-width: $tab-p-width - 1px ) and (orientation: portrait)
+        {block}
+
+only_mobile_landscape()
+    @media screen and ( max-width: $tab-p-width - 1px ) and (orientation: landscape)
+        {block}
+        
+only_tablet-p()
+    @media screen and ( min-width: $tab-p-width ) and ( max-width: $tab-l-width - 1px )
+        {block}
+
+only_tablet()
+    @media screen and ( min-width: $tab-p-width ) and ( max-width: $lap-width - 1px )
+        {block}
+
+only_desk()
+    @media screen and ( min-width: $lap-width )
+        {block}
+
+mobile_and_tablet()
+    @media screen and ( max-width: $lap-width - 1px )
+        {block}
+
+mobile_and_tablet-p()
+    @media screen and ( max-width: $tab-l-width - 1px )
+        {block}
+
+tablet_and_desk()
+    @media screen and ( min-width: $tab-p-width )
+        {block}
+
+tablet-l_and_desk()
+    @media screen and ( min-width: $tab-l-width )
+        {block}

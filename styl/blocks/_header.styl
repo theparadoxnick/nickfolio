@@ -1,0 +1,39 @@
+// -----------------------------------
+//              Header
+// -----------------------------------
+
+.header__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+    &.-is-active
+        justify-content: right
+
+.header__chain
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    vertical-align: middle
+    padding: 0
+    margin: 0
+
+.header__logo
+    max-width: 200px
+    cursor: pointer
+    height: 50px
+
+    &.-smaller
+        width: 50px
+    
+    &.-white
+        display: none
+        &.-is-active
+            display: block
+
+    &.-brown
+        display: none
+
+        &.-is-active
+            display: block
